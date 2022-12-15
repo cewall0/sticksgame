@@ -23,3 +23,16 @@
 /Users/c_wallace/Projects/portfolio/SticksGame/obj/Debug/netcoreapp3.1/SticksGame.dll
 /Users/c_wallace/Projects/portfolio/SticksGame/obj/Debug/netcoreapp3.1/SticksGame.pdb
 /Users/c_wallace/Projects/portfolio/SticksGame/obj/Debug/netcoreapp3.1/SticksGame.genruntimeconfig.cache
+/Users/c_wallace/Projects/csharp/sticksgame/bin/Debug/netcoreapp3.1/SticksGame.deps.json
+/Users/c_wallace/Projects/csharp/sticksgame/bin/Debug/netcoreapp3.1/SticksGame.runtimeconfig.json
+/Users/c_wallace/Projects/csharp/sticksgame/bin/Debug/netcoreapp3.1/SticksGame.runtimeconfig.dev.json
+/Users/c_wallace/Projects/csharp/sticksgame/bin/Debug/netcoreapp3.1/SticksGame.dll
+/Users/c_wallace/Projects/csharp/sticksgame/bin/Debug/netcoreapp3.1/SticksGame.pdb
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.csproj.AssemblyReference.cache
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.AssemblyInfoInputs.cache
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.AssemblyInfo.cs
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.csproj.CoreCompileInputs.cache
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.dll
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.pdb
+/Users/c_wallace/Projects/csharp/sticksgame/obj/Debug/netcoreapp3.1/SticksGame.genruntimeconfig.cache

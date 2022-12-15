@@ -16,8 +16,8 @@ namespace SticksGame
         private bool p2Turn;            // boolean true = player 2's turn, false = player 1 or 3's turn.
         private string currentPlayer;   // string of the name for who's turn it is.
         private string playerOne;       // string for player 1's name (player)
-        private string playerTwo;       // string for player 2's name (player or main AI)
-        private string playerThree;     // string for player 3's name (training AI)
+        private string playerTwo;       // string for player 2's name (player or main (trained) AI)
+        private string playerThree;     // string for player 3's name (helping AI)
         private int whichGame;          // int 1 = player v. player,  2 = player v. AI, 3 = player v. trained AI
         private bool playAIAgain;       // boolean true = continue to play again, set to false if player v. AI user wants to quit.
         private bool didP2Win;          // boolean to true if player one won the game.
@@ -104,6 +104,7 @@ namespace SticksGame
         {
             return whichGame;
         }
+
         public void SetWhichGame(int newWhichGame)
         {
             whichGame = newWhichGame;
@@ -113,6 +114,7 @@ namespace SticksGame
         {
             return playAIAgain;
         }
+
         public void SetPlayAIAgain(bool newPlayAIAgain)
         {
             playAIAgain = newPlayAIAgain;
@@ -122,6 +124,7 @@ namespace SticksGame
         {
             return didP2Win;
         }
+
         public void SetDidP2Win(bool newDidP2Win)
         {
             didP2Win = newDidP2Win;
@@ -129,14 +132,12 @@ namespace SticksGame
 
         //------- Other Methods -------//
 
-
         // This method will substract the number of sticks passed into it (deleteSticks)
         // and will update the number of sticks remaining (numSticks).
         public void SubtractSticks(int deleteSticks)
         {
             SetCurrentNumSticks(currentNumSticks - deleteSticks);
         } // end subtractSticks function
-
 
         // This method changes who's turn it is.
         public void NewTurn(int aiTraining)
@@ -147,12 +148,14 @@ namespace SticksGame
                 bool isP2Turn = GetP2Turn(); // get the boolean value of p2Turn
                 if (isP2Turn == true) // if it is player 2's turn
                 {
-                    currentPlayer = playerOne; // make the current player's turn name = player One.
+                    //currentPlayer = playerOne; // make the current player's turn name = player One.
+                    SetCurrentPlayer(playerOne);
                     SetP2Turn(false); // make p1Turn false so it is player 2's turn.
                 } // end if
-                else // aiTraining == 3
+                else
                 {
-                    currentPlayer = playerTwo; // make the current player's turn name = player One.
+                    //currentPlayer = playerTwo; // make the current player's turn name = player One.
+                    SetCurrentPlayer(playerTwo);
                     SetP2Turn(true); // isP1Turn = false, so we need to make it player 2's turn. (change p1Turn to false).
                 } // end else
             } // end if player v. player or player v. ai

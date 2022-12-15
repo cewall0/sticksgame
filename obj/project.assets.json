@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/c_wallace/Projects/portfolio/SticksGame/SticksGame.csproj",
+      "projectUniqueName": "/Users/c_wallace/Projects/csharp/sticksgame/SticksGame.csproj",
       "projectName": "SticksGame",
-      "projectPath": "/Users/c_wallace/Projects/portfolio/SticksGame/SticksGame.csproj",
+      "projectPath": "/Users/c_wallace/Projects/csharp/sticksgame/SticksGame.csproj",
       "packagesPath": "/Users/c_wallace/.nuget/packages/",
-      "outputPath": "/Users/c_wallace/Projects/portfolio/SticksGame/obj/",
+      "outputPath": "/Users/c_wallace/Projects/csharp/sticksgame/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/c_wallace/.config/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
       }
     }
   }

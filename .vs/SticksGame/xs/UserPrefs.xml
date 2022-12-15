@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{D4B00588-EF66-4D52-90CB-61CB2E5CA1CA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AI.cs">
+    <Files>
+      <File FileName="Program.cs" Line="565" Column="61" />
+      <File FileName="Game.cs" Line="134" Column="42" />
+      <File FileName="AI.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SticksGame" expanded="True">
+            <Node name="SticksGame" expanded="True">
+              <Node name="AI.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SticksGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7fDAieBTTy8XcYGU8WbNWAcFgF2SXFDuOOvG++g6qbcGtGC2LEIh24WUU9+s10/d6YX7W55dZLvVCJYjqOaHbg==",
+  "dgSpecHash": "zknmppK3rG1Lg3tx9G2DT/gwmYa4bdzW/z6giTNhXT5xPeIM/pM3USs6Sp25WQYtSc96zfHK6fDZOUi1tZpbHg==",
   "success": true,
-  "projectFilePath": "/Users/c_wallace/Projects/portfolio/SticksGame/SticksGame.csproj",
+  "projectFilePath": "/Users/c_wallace/Projects/csharp/sticksgame/SticksGame.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

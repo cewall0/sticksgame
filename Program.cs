@@ -18,7 +18,7 @@ namespace SticksGame
 
             // Let's find out which game we are playing.
             // Ask if this is a player vs. player (1) or a player vs. AI (2) game.
-            Console.Write("Options:\nPlay against a friend(1)\nPlay against the computer(2)\nPlay against a trained AI(3)\nWhich option do you take(1 - 3)? ");
+            Console.Write("\nOptions:\nPlay against a friend(1)\nPlay against the computer(2)\nPlay against a trained AI(3)\n\nWhich option do you choose(1 - 3)? ");
             gameToPlayString = Console.ReadLine();
             int.TryParse(gameToPlayString, out gameToPlay);
             while (gameToPlay != 1 && gameToPlay != 2 && gameToPlay != 3)
@@ -38,7 +38,14 @@ namespace SticksGame
 
             // Get the number of sticks the game has initially and the player names from the user.
             // First, get the number of sticks from the user.
+            Console.WriteLine("");
+            Console.WriteLine("*******************************************************************************");
             Console.WriteLine("Welcome to the game of sticks!");
+            Console.WriteLine("");
+            Console.WriteLine("This is a game where players take turns picking up 1-3 sticks from a table.");
+            Console.WriteLine("The player who picks up the last remaining stick from the table loses.");
+            Console.WriteLine("*******************************************************************************");
+            Console.WriteLine("");
             Console.Write("How many sticks are there on the table initially (10-100)?: ");
             numSticksString = Console.ReadLine();
             int.TryParse(numSticksString, out totalNumSticks);
@@ -48,6 +55,7 @@ namespace SticksGame
                 Console.WriteLine("Please enter a number between 10 and 100. ");
                 numSticksString = Console.ReadLine();
                 int.TryParse(numSticksString, out totalNumSticks);
+                Console.WriteLine("");
             }
             return totalNumSticks;
         } // end GetTotalNumSticks function
@@ -57,10 +65,12 @@ namespace SticksGame
         {
             if (currentNumSticks == 1)
             {
+                Console.WriteLine("");
                 Console.WriteLine("There is 1 stick left on the board. ");
             }
             else
             {
+                Console.WriteLine("");
                 Console.WriteLine("There are " + currentNumSticks + " sticks on the board.");
             }
         } // end StickStatus function
@@ -95,6 +105,7 @@ namespace SticksGame
                 // Make sure the number of sticks chosen is valid (1-3).
                 while (numDelete < 1 || numDelete > 3)
                 {
+                    Console.WriteLine("");
                     Console.Write("Please enter a number between 1 and 3. ");
                     numDeleteString = Console.ReadLine();
                     int.TryParse(numDeleteString, out numDelete);
@@ -106,18 +117,21 @@ namespace SticksGame
                 {
                     if (numDelete > 3) // They can't take that many.
                     {
+                        Console.WriteLine("");
                         Console.Write("There aren't that many sticks on the board. Enter '1' or '2'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
                     } // end if numDelete > 3
                     else if (numDelete == 3) // They must leave one.
                     {
+                        Console.WriteLine("");
                         Console.Write("There are only 3 sticks left. You must leave one for your opponent or you will lose. Enter '1' or '2'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
                     } // end else if numDelete = 3
                     else if (numDelete < 1) // They must take one.
                     {
+                        Console.WriteLine("");
                         Console.Write("Nice try, but you must choose at least one stick. Enter '1' or '2'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
@@ -131,18 +145,21 @@ namespace SticksGame
                 {
                     if (numDelete > 2) // Not that many sticks available.
                     {
+                        Console.WriteLine("");
                         Console.Write("There aren't that many sticks on the board. Enter '1'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
                     } // end if for not that many sticks
                     else if (numDelete == 2)// must leave one stick.
                     {
+                        Console.WriteLine("");
                         Console.Write("There are only 2 sticks left. You must leave one for your opponent or you will lose. Enter '1'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
                     } // end else if must leave one stick.
                     else if (numDelete < 1) // They must take one.
                     {
+                        Console.WriteLine("");
                         Console.Write("Nice try, but you must choose at least one stick. Enter '1' or '2'. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
@@ -155,12 +172,14 @@ namespace SticksGame
                 {
                     if (numDelete > 1) // There is only one stick left. Not more than one.
                     {
+                        Console.WriteLine("");
                         Console.Write("There is only one stick left. Please enter '1'. \nYou must pick up this last stick. You will lose. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
                     } // end if grabbed too many sticks.
                     else if (numDelete < 1) // They must grab one.
                     {
+                        Console.WriteLine("");
                         Console.Write("Nice try, but you must grab the stick. Enter '1'. \nYou must pick up this last stick. You will lose. ");
                         numDeleteString = Console.ReadLine();
                         int.TryParse(numDeleteString, out numDelete);
@@ -181,6 +200,7 @@ namespace SticksGame
                 if (whichPlayer == 1)
                 {
                     // Get player one's name.
+                    Console.WriteLine("");
                     Console.Write("Enter name for player 1: ");
                     playerOne = Console.ReadLine();
 
@@ -189,6 +209,7 @@ namespace SticksGame
                 else // (whichPlayer == 2)
                 {
                     // Get player two's name.
+                    Console.WriteLine("");
                     Console.Write("Enter name for player 2: ");
                     playerTwo = Console.ReadLine();
 
@@ -200,6 +221,7 @@ namespace SticksGame
                 if (whichPlayer == 1)
                 {
                     // Get player one's name.
+                    Console.WriteLine("");
                     Console.Write("Enter name for player 1: ");
                     playerOne = Console.ReadLine();
 
@@ -207,8 +229,9 @@ namespace SticksGame
                 } // end if
                 else //(whichPlayer == 2)
                 {
-                    Console.WriteLine("Player 2 will be the AI.");
-                    playerTwo = "AI";
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 2 will be an untrained AI. He does not play this game very well.");
+                    playerTwo = "Untrained AI";
                     return playerTwo;
                 } // end else
             } // end else if whichGame == 2
@@ -217,6 +240,7 @@ namespace SticksGame
                 if (whichPlayer == 1)
                 {
                     // Get player one's name.
+                    Console.WriteLine("");
                     Console.Write("Enter name for player 1: ");
                     playerOne = Console.ReadLine();
 
@@ -224,8 +248,9 @@ namespace SticksGame
                 } // end if 
                 else if (whichPlayer == 2)
                 {
-                    Console.WriteLine("Player 2 will be the trained AI.");
-                    playerTwo = "trained AI";
+                    Console.WriteLine("");
+                    Console.WriteLine("Player 2 will be a trained AI.");
+                    playerTwo = "Trained AI";
                     return playerTwo;
                 } // end else if
                 else // whichPlayer == 3
@@ -239,7 +264,6 @@ namespace SticksGame
         // This method greets our players.
         static void GreetPlayers(string playerOne, string playerTwo)
         {
-
             Console.WriteLine("\nWelcome " + playerOne + "(P1) and " + playerTwo + "(P2)!\n");
             Console.WriteLine("Let's begin! \n");
 
@@ -248,8 +272,10 @@ namespace SticksGame
         // This method declares the winner and loser of the game.
         static void DeclareWinner(string winner, string loser)
         {
-            //Console.WriteLine("There are no sticks remaining on the board.");
-            //Console.WriteLine("Congratulations " + winner + ". You won!");
+            Console.WriteLine("");
+            Console.WriteLine("There are no sticks remaining on the board.");
+            Console.WriteLine("");
+            Console.WriteLine("Congratulations " + winner + ". You won!");
             Console.WriteLine("Sorry " + loser + ". You lost.");
 
         } // end DeclarWinner function
@@ -259,9 +285,15 @@ namespace SticksGame
         {
             string answer = ""; // initialize a string for user input.
 
-            Console.Write("\nDo you want to quit playing this game? Enter 'q'. ");
+            Console.Write("\nDo you want to quit playing this game? Enter 'y' or 'n'. ");
             answer = Console.ReadLine();
-            if (answer == "q")
+            while (answer != "y" && answer != "n")
+            {
+                Console.Write("\nPlease only enter 'y' or 'n'. ");
+                answer = Console.ReadLine();
+            } // end while loop
+
+            if (answer == "y")
             {
                 return true;
             }
@@ -271,10 +303,11 @@ namespace SticksGame
             }
         } // end function wannaQuit
 
-
         static void Main(string[] args)
         {
             // Declare some variables.
+
+            bool wannaQuit = false;             // This is a string declaring if we want to quit or not.
             int totalNumSticks = 0;             // This is the initial number of sticks in the game.
             string playerOne = "human";         // This is a string variable that holds player 1's name (player)
             string playerTwo = "AI";            // This is a string variable that holds player 2's name (player or main AI)
@@ -283,7 +316,6 @@ namespace SticksGame
             int gameToPlay = 0;                 // This is the int input for which game to play.
             string winner = "";                 // This is a string variable to hold the winner's name.
             string loser = "";                  // This is a string variable to hold the loser's name.
-            bool wannaQuit = false;             // This is a string declaring if we want to quit or not.
 
             // Get the number of sticks for the game and tell the sticks game instance using the setter.
             totalNumSticks = GetTotalNumSticks();
@@ -299,6 +331,7 @@ namespace SticksGame
 
             // Ask which game we want to play.
             gameToPlay = AskWhichGame();
+
             if (gameToPlay == 1) // player vs. player
             {
                 sticks.SetWhichGame(1); // playing player vs. player.
@@ -344,42 +377,51 @@ namespace SticksGame
                 // Get the player information.
                 if (sticks.GetWhichGame() == 1) // We are in player v. player game
                 {
-                    // Set the current player as player one. That's who begins our game.
-                    sticks.SetCurrentPlayer(sticks.GetPlayerOne());
+                        // Set the current player as player one. That's who begins our game.
+                        sticks.SetCurrentPlayer(sticks.GetPlayerOne());
 
-                    // We need a loop to run this game until we get a winner.
-                    // We'll use a while loop because we don't know how long the game will last.
-                    // But, we keep playing until there are no sticks remaining.
-                    while (sticks.GetCurrentNumSticks() > 0) // While there are still sticks available to take, we will ask the next player to take a turn.
-                    {
-                        // Update how many sticks are on the board.
-                        StickStatus(sticks.GetCurrentNumSticks());
+                        // We need a loop to run this game until we get a winner.
+                        // We'll use a while loop because we don't know how long the game will last.
+                        // But, we keep playing until there are no sticks remaining.
+                        while (sticks.GetCurrentNumSticks() > 0) // While there are still sticks available to take, we will ask the next player to take a turn.
+                        {
+                            // Update how many sticks are on the board.
+                            StickStatus(sticks.GetCurrentNumSticks());
 
-                        // Ask the current player how many sticks they want to choose.
-                        howManyToDelete = HowMany(sticks.GetCurrentPlayer(), sticks.GetCurrentNumSticks());
+                            // Ask the current player how many sticks they want to choose.
+                            howManyToDelete = HowMany(sticks.GetCurrentPlayer(), sticks.GetCurrentNumSticks());
 
-                        // Take those sticks away.
-                        sticks.SubtractSticks(howManyToDelete);
+                            // Take those sticks away.
+                            sticks.SubtractSticks(howManyToDelete);
 
-                        // It's the other player's turn.
-                        sticks.NewTurn(1);
+                            // It's the other player's turn.
+                            sticks.NewTurn(1);
 
-                    } // end while loop
+                        } // end while loop
 
-                    // A player had to grab the last stick and lost the game. 
-                    winner = sticks.GetCurrentPlayer(); // We did a newTurn at the end, so the current player is the winner.
-                    sticks.NewTurn(1);  // We have to switch the current player back to who took the last stick.
-                    loser = sticks.GetCurrentPlayer();  // This is the loser.
-                    DeclareWinner(winner, loser);
+
+                        // Let's declare the winner and loser. . .
+                        // A player had to grab the last stick and lost the game. 
+                        winner = sticks.GetCurrentPlayer(); // We did a newTurn at the end, so the current player is the winner.
+                        sticks.NewTurn(1);  // We have to switch the current player back to who took the last stick.
+                        loser = sticks.GetCurrentPlayer();  // This is the loser.
+
+                        DeclareWinner(winner, loser);
+
+                    // Reset the number of current sticks to the original number of sticks on the board.
+                    sticks.SetCurrentNumSticks(totalNumSticks);
+
 
                     // ask if we want to quit the player vs. player game (#1).
                     wannaQuit = WannaQuit();
 
-                } // end if gameToPlay is player v. player
+            } // end if gameToPlay is player v. player
+
                 else if (sticks.GetWhichGame() == 2) // We are doing a player vs. AI game
                 {
                     // Set the current player as player one. That's who begins our game.
                     sticks.SetCurrentPlayer(sticks.GetPlayerOne());
+                    sticks.SetP2Turn(false);
 
                     // We need a loop to run this game until we get a winner.
                     // We'll use a while loop because we don't know how long the game will last.
@@ -399,7 +441,10 @@ namespace SticksGame
                         {
                             // We choose a ball from whose hat number = the number of sticks on the board.
                             // It returns a ball number of sticks to subtract back to main.
+                            // We need to make sure the random how many to delete is not more than the number of sticks left.
+
                             howManyToDelete = bot1.ChooseRandomBall(sticks.GetCurrentNumSticks());
+
                             if (howManyToDelete == 1)
                             {
                                 Console.WriteLine(playerTwo + " takes " + howManyToDelete + " stick.");
@@ -458,8 +503,8 @@ namespace SticksGame
                 else if (sticks.GetWhichGame() == 3) // we have the player vs. trained AI game.  We need to let a bot play a bot
                 {
                     int numGames = 0; // Initializing the variable that will hold the number of training AI games.
-
-                    Console.Write("How many games do you want the AI bots to play to train? ");
+                    Console.WriteLine("The AI is not yet trained. We need to play a bunch of games for him to get trained.");
+                    Console.WriteLine("How many games do you want the AI bot to play for his training? (May I suggest 500 games?) ");
                     string numGamesString = Console.ReadLine();
                     while (!int.TryParse(numGamesString, out numGames))
                     {
@@ -473,7 +518,7 @@ namespace SticksGame
                     // play the game numGames times
                     for (int i = 0; i < numGames; i++)
                     {
-                        // Let's have training AI(P2) play the helping AI(P3)
+                        // Let's have training AI(P2)(bot1) play the helping AI(P3)(bot2)
                         // Set the current player as player three. That's who begins our game.
                         sticks.SetCurrentPlayer(sticks.GetPlayerThree());
                         sticks.SetP2Turn(false);
@@ -492,7 +537,7 @@ namespace SticksGame
                                 howManyToDelete = bot1.ChooseRandomBall(sticks.GetCurrentNumSticks());
 
                             } // end if current player is p2 (bot2)
-                            else // it is Trained AI(P3) turn (bot3)
+                            else // it is Helping AI(P3) turn (bot3)
                             {
                                 // We choose a ball from whose hat number = the number of sticks on the board.
                                 // It returns a ball number of sticks to subtract back to main.
@@ -514,7 +559,7 @@ namespace SticksGame
 
                         if (winner == sticks.GetPlayerTwo()) // winner is player 2=bot1. bot2 lost, so keep the bot2 besides balls out.
                         {
-                            //sticks.setDidP2Win(true);       // Set did player 2 win to true because player one won.
+                            //sticks.setDidP2Win(true);     // Set did player 2 win to true because player one won.
                             bot2.ResetBesideHat();          // reset the besideHat array to all 0's
                             bot2.CheckOneEachBallInHat();   // Double check we have 1 of each type of ball in bot2
                             bot1.PutBesideInHats();         // put bot1 balls back in hat and double winner balls
@@ -523,7 +568,7 @@ namespace SticksGame
                         } // end if
                         else // the winner is bot2. bot1 lost. Keep bot1 beside balls out.
                         {
-                            //sticks.setDidP2Win(false);      // Player 3 won. Set did player 2 win boolean to false.
+                            //sticks.setDidP2Win(false);    // Player 3 won. Set did player 2 win boolean to false.
                             bot1.ResetBesideHat();          // reset the besideHat array to all 0's for bot1
                             bot1.CheckOneEachBallInHat();   // Double check we have 1 of each type of ball in bot1 
                             bot2.PutBesideInHats();         // put bot2 balls back in hat and double winner balls
